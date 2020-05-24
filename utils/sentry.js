@@ -9,7 +9,7 @@ module.exports = (release = process.env.SENTRY_RELEASE) => {
     attachStacktrace: true,
   }
 
-  /*
+  
   // When we're developing locally
   if (process.env.NODE_ENV !== 'production') {
     // Don't actually send the errors to Sentry
@@ -23,7 +23,7 @@ module.exports = (release = process.env.SENTRY_RELEASE) => {
       }),
     ]
   }
-  */
+  
 
   Sentry.init(sentryOptions)
 
