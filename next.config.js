@@ -5,7 +5,8 @@ module.exports = nextSourceMaps({
   env: {
     SENTRY_DSN: process.env.SENTRY_DSN,
     SENTRY_ORG_SLUG: process.env.SENTRY_ORG_SLUG,
-    SENTRY_PRJ_SLUG: process.env.SENTRY_PRJ_SLUG
+    SENTRY_PRJ_SLUG: process.env.SENTRY_PRJ_SLUG,
+    VERCEL_GITHUB_COMMIT_SHA: process.env.VERCEL_GITHUB_COMMIT_SHA
   },
   webpack: (config, { isServer, buildId }) => {
     config.plugins.push(

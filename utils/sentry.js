@@ -1,7 +1,7 @@
 const Sentry = require('@sentry/node')
 const SentryIntegrations = require('@sentry/integrations')
 
-module.exports = (release = process.env.SENTRY_RELEASE) => {
+module.exports = (release = process.env.VERCEL_GITHUB_COMMIT_SHA) => {
   const sentryOptions = {
     dsn: process.env.SENTRY_DSN,
     release,
